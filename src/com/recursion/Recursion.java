@@ -10,8 +10,13 @@ public class Recursion {
 		System.out.println(result);
 		
 		// Find nth fibonnaci number of series
-		
 		Fibonacci fibo = new Fibonacci();
 		System.out.println(fibo.fibo(4));
+		
+		// Bunny Ears Problem
+		BunnyEars bunny = new BunnyEars();
+		int number = bunny.bunnyEars(4);
+		System.out.println(number);
+				
 	}
 }
