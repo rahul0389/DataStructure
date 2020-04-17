@@ -104,4 +104,43 @@ public class SingleLinkedList
 		
 		return -1;
 	}
+	
+	// Delete a node from linked list 
+	
+	public void deleteNodeInLinkedList(int position)
+	{
+		if(position==0)
+		{   
+			head = head.getNext();
+		}
+		else if(position >= size)
+		{
+			System.out.println("Cannot remove");
+		}
+		else 
+		{
+			SingleNode current = head;
+			int curposition = 0;
+			while(current != null)
+			{
+				if(curposition == position-1 )
+				{
+					current.setNext(current.getNext().getNext());
+					size--;
+					return;
+				}
+				else
+				{
+					current = current.getNext();
+					curposition++;
+				}   
+			}
+			
+			}
+			
+		}
+			
+		
+	
+	
 }

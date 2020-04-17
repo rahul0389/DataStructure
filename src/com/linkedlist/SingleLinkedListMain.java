@@ -12,6 +12,9 @@ public class SingleLinkedListMain {
 		list.traverseLinkedList();
 		System.out.println("\nPosition of 37 is " + list.searchInLinkedList(37));
 		System.out.println("Position of 47 is " + list.searchInLinkedList(47));
+		//list.traverseLinkedList();
+		list.deleteNodeInLinkedList(2);
+		list.traverseLinkedList();
 	}
 
 }
