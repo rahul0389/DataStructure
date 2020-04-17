@@ -1,0 +1,107 @@
+package com.linkedlist;
+
+import com.node.SingleNode;
+
+public class CircularSingleLinkedList 
+{
+	private SingleNode head;
+	private SingleNode tail;
+	private int size=0;
+	public SingleNode getHead() {
+		return head;
+	}
+	public void setHead(SingleNode head) {
+		this.head = head;
+	}
+	public SingleNode getTail() {
+		return tail;
+	}
+	public void setTail(SingleNode tail) {
+		this.tail = tail;
+	}
+	public int getSize() {
+		return size;
+	}
+	public void setSize(int size) {
+		this.size = size;
+	}
+	
+	 // Creation of Circular Linked List
+	public void createCircularSingleLinkedList(int value)
+	{
+		SingleNode node = new SingleNode();
+		node.setValue(value);
+		node.setNext(null);
+		head = node;
+		tail = head;
+		size++;
+	}
+	
+	
+	// Linked List Exist
+	public boolean isCircularLinkedListExists()
+	{
+		if(head == null)
+		{
+			return false;
+		}
+		else
+			return true;
+	}
+	
+	
+	//Get size of the linkedlist
+	public int getCircularLinkedListSize()
+	{
+		return size;
+	}
+	
+	// Insert a node in Circular Linked List
+	public void insertInCircularLinkedList(int value, int position)
+	{
+		SingleNode node = new SingleNode();
+		node.setValue(value);
+		SingleNode current = head;
+		if(!isCircularLinkedListExists())
+		{
+			System.out.println("Circular Linked List doesnt exist");
+			return;
+		}
+		else if (position == 0)
+		{
+			node.setNext(head);
+			tail.setNext(node);
+			head = node;
+			size++;
+		}
+		else if (position >= size)
+		{
+			tail.setNext(node);
+			node.setNext(head);
+			tail = node;
+			size++;
+		}
+		else 
+		{
+			for(int i =0;i<position-1;i++)
+			{
+				current = current.getNext();
+			}
+			node.setNext(current.getNext());
+			current.setNext(node);
+			size++;
+		}
+	}
+	
+	// Traverse Linked List
+	public void traverseSingleCircularLinkedList()
+	{
+		System.out.println("Linked List Traverse");
+		SingleNode current = head;
+		for(int i=0; i<getCircularLinkedListSize();i++ )
+		{
+			System.out.print(current.getValue()+", ");
+			current = current.getNext();
+		}
+	}
+}

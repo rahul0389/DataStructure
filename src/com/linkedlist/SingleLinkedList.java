@@ -140,7 +140,14 @@ public class SingleLinkedList
 			
 		}
 			
-		
+	// Delete Linked List 
+	
+	public void deleteLinkedList()
+	{
+		head = null;
+		tail = null;
+		size = 0;
+	}
 	
 	
 }
