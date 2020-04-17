@@ -10,6 +10,8 @@ public class SingleLinkedListMain {
 		list.insertInLinkedList(33, 1);
 		list.insertInLinkedList(37, 1);
 		list.traverseLinkedList();
+		System.out.println("\nPosition of 37 is " + list.searchInLinkedList(37));
+		System.out.println("Position of 47 is " + list.searchInLinkedList(47));
 	}
 
 }

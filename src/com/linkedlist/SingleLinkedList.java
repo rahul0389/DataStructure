@@ -19,7 +19,7 @@ public class SingleLinkedList
 	  size++;
 
 	}
-	
+	// Function to check if linked list is present
 	public boolean isLinkedListExists()
 	{
 		if (head==null){
@@ -31,7 +31,7 @@ public class SingleLinkedList
 		}
 		
 	}
-	
+	// Function to insert item in linked list
 	public void insertInLinkedList(int nodeValue,int position) {
 		SingleNode node = new SingleNode();
 		node.setValue(nodeValue);
@@ -66,8 +66,7 @@ public class SingleLinkedList
 					break;
 				}
 				    current=current.getNext();
-					pointer++;	
-				
+					pointer++;					
 			}
 			node.setNext(current.getNext());
 			current.setNext(node);
@@ -75,6 +74,7 @@ public class SingleLinkedList
 		}
 	}
 	
+	// Traversing Single Linked list
 	public void traverseLinkedList()
 	{
 		SingleNode current = head;
@@ -83,5 +83,25 @@ public class SingleLinkedList
 			System.out.print(current.getValue()+ ", ");
 			current = current.getNext();
 		}
+	}
+	
+	//Searching a value in Single Linked list
+	public int searchInLinkedList(int searchValue)
+	{
+		SingleNode current = head;
+		int pos = 0;
+		while ( current != null)
+		{
+			if(current.getValue() == searchValue )
+			{
+				return pos;
+			}
+			else {
+				current = current.getNext();
+				pos++;
+			}
+		}
+		
+		return -1;
 	}
 }
