@@ -100,8 +100,30 @@ public class CircularSingleLinkedList
 		SingleNode current = head;
 		for(int i=0; i<getCircularLinkedListSize();i++ )
 		{
-			System.out.print(current.getValue()+", ");
+			System.out.print(current.getValue()+" ");
 			current = current.getNext();
 		}
+		System.out.println();
+	}
+	
+	// Search in Linked List and return position
+	
+	public int searchInCircularLinkedList(int searchValue)
+	{
+		SingleNode current = head;
+		for(int i=0; i<getCircularLinkedListSize();i++ )
+		{
+			if (current.getValue()==searchValue)
+				return i;
+			current = current.getNext();
+		}
+		return -1;
+	}
+	
+	// Delete in Circular Linked List
+	
+	public void deleteInCircularLinkedList(int position)
+	{
+		
 	}
 }
