@@ -163,4 +163,10 @@ public class CircularSingleLinkedList
 			size--;
 		}
 	}
+	
+	public void deleteCircularLinkedList()
+	{
+		head=null;
+		tail=null;
+	}
 }
