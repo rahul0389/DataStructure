@@ -124,6 +124,43 @@ public class CircularSingleLinkedList
 	
 	public void deleteInCircularLinkedList(int position)
 	{
+		if(!isCircularLinkedListExists())
+		 return;
 		
+		else
+		{
+			if(position==0)
+			{
+				head=head.getNext();
+				tail.setNext(head);
+			}
+			else if (position>=size-1)
+			{
+				SingleNode current=head;
+				
+				for(int i =0;i<size-2;i++)
+				{
+					current=current.getNext();
+				}
+				if(current==tail)
+				{
+					System.out.println("Setting head and tail to null");
+					head=tail=null;
+					return;
+				}
+				tail=current;
+				current.setNext(head);
+			}
+			
+			else
+			{   SingleNode current=head;
+				for(int i =0;i<position-1;i++)
+				{
+					current=current.getNext();
+				}
+				current.setNext(current.getNext().getNext());
+			}
+			size--;
+		}
 	}
 }
