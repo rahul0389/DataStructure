@@ -6,6 +6,7 @@ public class DoubleLinkedListMain
 	{
 	DoubleLinkedList doublelist = new DoubleLinkedList();
 	doublelist.createDoubleLinkedList(5);
-	
+	doublelist.insertInDoubleLinkedList(1, 0);
+	doublelist.insertInDoubleLinkedList(3, 2);
 	}
 }
