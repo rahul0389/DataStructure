@@ -15,6 +15,7 @@ public class DoubleLinkedList
 		node.setPrev(null);
 		node.setNext(null);
 		head=tail=node;
+		size++;
 	}
 	
 	public boolean isDoubleLinkedListExists()
@@ -41,6 +42,7 @@ public class DoubleLinkedList
 		{
 			node.setNext(null);
 			node.setPrev(tail);
+			tail.setNext(node);
 			tail= node;
 			size++;
 		}
@@ -58,5 +60,17 @@ public class DoubleLinkedList
 			size++;
 		}
 	}
+	
+	public void traverseDoubleLinkedList()
+	{
+		System.out.println(size);
+		DoubleNode current = head; 
+		for(int i =0;i<size;i++)
+		{
+			System.out.print(current.getValue()+" ");
+			current = current.getNext();
+		}
+	}
+	
 }
 
