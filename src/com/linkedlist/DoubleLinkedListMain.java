@@ -10,5 +10,17 @@ public class DoubleLinkedListMain
 	doublelist.insertInDoubleLinkedList(3, 8);
 	doublelist.insertInDoubleLinkedList(4, 8);
 	doublelist.traverseDoubleLinkedList();
+	doublelist.deleteNodeInCircularLinkedList(0);
+	doublelist.traverseDoubleLinkedList();
+	doublelist.deleteNodeInCircularLinkedList(0);
+	doublelist.traverseDoubleLinkedList();
+	doublelist.deleteNodeInCircularLinkedList(0);
+	doublelist.traverseDoubleLinkedList();
+	doublelist.deleteNodeInCircularLinkedList(0);
+	doublelist.traverseDoubleLinkedList();
+	doublelist.deleteNodeInCircularLinkedList(0);
+	doublelist.traverseDoubleLinkedList();
+	doublelist.deleteNodeInCircularLinkedList(0);
+	doublelist.traverseDoubleLinkedList();
 	}
 }
